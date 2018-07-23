@@ -63,6 +63,7 @@ export default {
 .fas {
   padding-right: 0.3rem;
   font-size: 1.2rem;
+  color: #005533;
 }
 
 .user-icon {
