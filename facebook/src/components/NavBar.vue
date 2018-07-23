@@ -1,6 +1,8 @@
 <template>
   <div class="nav-bar-base">
-    <img class="logo" src="../assets/logo.png" />
+    <div class="logo">
+      <i class="fab fa-facebook-f"></i>
+    </div>
     <search-form />
     <menu-base>
       <img class="user-icon" src="../assets/usagi.jpg" />
@@ -13,19 +15,19 @@
       <span>友達を検索</span>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="fas fa-users"></i>
+      <i class="menu-icon fas fa-users"></i>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="fas fa-comment"></i>
+      <i class="menu-icon fas fa-comment"></i>
     </menu-base>
     <menu-base>
-      <i class="fas fa-globe-asia"></i>
+      <i class="menu-icon fas fa-globe-asia"></i>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="fas fa-question-circle"></i>
+      <i class="menu-icon fas fa-question-circle"></i>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="fas fa-caret-down"></i>
+      <i class="menu-icon fas fa-caret-down"></i>
     </menu-base>
   </div>
 </template>
@@ -56,11 +58,24 @@ export default {
 }
 
 .logo {
-  height: 1.2rem;
-  margin: 0.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #42b983;
+  background-color: white;
+  margin: 0 0.4rem 0 0;
+  font-size: 1.3rem;
+  border-radius: 0.1rem;
+  position: relative;
+  .fab {
+    position: absolute;
+    top: 0.3rem;
+    left: 0.5rem;
+
+  }
 }
 
-.fas {
+
+.menu-icon {
   padding-right: 0.3rem;
   font-size: 1.2rem;
   color: #005533;
