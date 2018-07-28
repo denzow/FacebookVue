@@ -15,16 +15,24 @@
       <span>友達を検索</span>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="menu-icon fas fa-users"></i>
+      <tooltip content="友達リクエスト">
+        <i class="menu-icon fas fa-users" slot="displayContent"></i>
+      </tooltip>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="menu-icon fas fa-comment"></i>
+      <tooltip content="メッセージ">
+        <i class="menu-icon fas fa-comment"></i>
+      </tooltip>
     </menu-base>
     <menu-base>
-      <i class="menu-icon fas fa-globe-asia"></i>
+      <tooltip content="お知らせ">
+        <i class="menu-icon fas fa-globe-asia"></i>
+      </tooltip>
     </menu-base>
     <menu-base :withBorder="false">
-      <i class="menu-icon fas fa-question-circle"></i>
+      <tooltip content="クイックヘルプ">
+        <i class="menu-icon fas fa-question-circle"></i>
+      </tooltip>
     </menu-base>
     <menu-base :withBorder="false">
       <i class="menu-icon fas fa-caret-down"></i>

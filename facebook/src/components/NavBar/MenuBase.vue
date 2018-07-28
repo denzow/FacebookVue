@@ -25,6 +25,7 @@ export default {
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: relative;
   &:hover {
     background-color: #22A953;
   }
