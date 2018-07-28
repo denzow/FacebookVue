@@ -1,8 +1,13 @@
 <template>
   <div class="search-form">
-    <input type="text" value="" class="search-box"
-           @focus="isFocused = true"
-           @blur="isFocused = false"/>
+    <auto-complete-area v-show="isFocused" />
+    <input
+      type="text"
+      value=""
+      class="search-box"
+      placeholder="検索"
+      @focus="isFocused = true"
+      @blur="isFocused = false"/>
     <div class="search-icon" :class="{ focused: isFocused }">
       <i class="fas fa-search" :class="{ focusedIcon: isFocused }"></i>
     </div>
@@ -10,8 +15,14 @@
 </template>
 
 <script>
+import AutoCompleteArea from './SearchForm/AutoCompleteArea';
+
 export default {
   name: 'SearchForm',
+  components: {AutoCompleteArea},
+  comments: {
+    AutoCompleteArea
+  },
   data() {
     return {
       isFocused: false,
@@ -22,7 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 .search-form {
-  width: 12rem;
+  width: 15rem;
   margin-right: 5rem;
   background-color: white;
   border-radius: 0.1rem;
@@ -30,6 +41,7 @@ export default {
   height: 1.5rem;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .search-box {
@@ -45,7 +57,10 @@ export default {
   height: 100%;
   font-size: 1rem;
   width: 15%;
-  padding: 0 0.2rem 0 0.5rem;
+}
+
+.fa-search {
+  padding-left: 0.5rem;
 }
 
 .focused {
@@ -55,4 +70,5 @@ export default {
 .focusedIcon {
   color: white;
 }
+
 </style>

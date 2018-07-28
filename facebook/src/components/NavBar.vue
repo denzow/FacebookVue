@@ -33,8 +33,8 @@
 </template>
 
 <script>
-import SearchForm from './NavBarComponents/SearchForm';
-import MenuBase from './NavBarComponents/MenuBase';
+import SearchForm from './NavBar/SearchForm';
+import MenuBase from './NavBar/MenuBase';
 
 export default {
   name: 'NavBar',

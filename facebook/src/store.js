@@ -5,7 +5,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-
+    searchHistoryList: [
+      'Denzow1',
+      'Denzow2',
+      'Denzow3',
+      'Denzow4',
+    ],
   },
   mutations: {
 
