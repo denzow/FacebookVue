@@ -1,6 +1,7 @@
 <template>
   <div @mouseover="showTooltip = true" @mouseout="showTooltip = false">
     <slot name="displayContent" />
+    <slot />
     <span class="tooltipContent" v-show="showTooltip">
       <slot name="tooltipContent" v-if="!content"/>
       <span v-if="content">{{ content }}</span>
@@ -27,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
   .tooltipContent {
+    word-break: keep-all;
     display: block;
     position: absolute;
     top: 30px;
